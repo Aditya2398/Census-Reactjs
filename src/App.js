@@ -11,6 +11,9 @@ import NotFound from './Components/pages/NotFound';
 import ListUser from './Components/layouts/ListUser';
 import ViewUser from './Components/layouts/ViewUser';
 import AddUser from './Components/layouts/AddUser';
+
+
+
 function App() {
   return (
     <Router>
@@ -24,7 +27,8 @@ function App() {
             <Route exact path="/userprofile" component={UserProfile}/>
             <Route exact path="/notfound" component={NotFound}/>
             <Route exact path="/listUser" component={ListUser}/>
-            <Route exact path="/viewUser" component={ViewUser}/>
+            <Route exact path="/viewUser/:uid" component={ViewUser}/>
+            {/* <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route> */}
             <Route exact path="/addUser/_add" component={AddUser}/>
           </Switch>      
       </div>

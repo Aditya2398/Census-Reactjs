@@ -19,14 +19,14 @@ export class AdminOps extends Component {
             console.log(err.message); //
         });
     }
-    // getTargetUsers(){
-    //     axios.get('http://localhost:8082/getUsersByAgeGroup')
-    //     .then(res => {
-    //         console.log(res.data);
-    //     }).catch(err =>{
-    //         console.log(err.message);
-    //     })
-    // }
+    getTargetUsers(){
+        axios.get('http://localhost:8082/getUsersByAgeGroup')
+        .then(res => {
+            console.log(res.data);
+        }).catch(err =>{
+            console.log(err.message);
+        })
+    }
     render() {
         return (
             <div style={userStyle}>

@@ -33,6 +33,18 @@ const MembersList= (props) => {
     const deleteFamilyMembers = (id) =>{
        axios.delete(`${url}/deleteMemberById/${id}`)
     }
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="container my-3">
             {/* <Link className="btn btn-outline-primary my-3 float-right" to={`userprofile/addUser/${this.props.userData.uid}`}>Add Member</Link> */}
@@ -66,7 +78,7 @@ const MembersList= (props) => {
 
                             <td>
                             {/* to={`/user/editUser/${props.userData.uid}`} */}
-                                <Link className="btn btn-primary my-1 mx-1 btn-sm" >Edit</Link>
+                                <Link className="btn btn-primary my-1 mx-1 btn-sm"> Edit</Link>
                                 <Link className="btn btn-danger my-1 mx-1 btn-sm" onClick={() => {deleteFamilyMembers(values.memId);}} >Delete</Link>
                             </td>
                         </tr>

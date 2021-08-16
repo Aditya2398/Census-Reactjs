@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {  withRouter} from 'react-router-dom';
 import AdminService from '../AdminService';
 
-
+// 
  class AddUser extends Component {
     constructor(props){
         super(props);
@@ -98,6 +98,7 @@ import AdminService from '../AdminService';
     }
     saveUser = (e) => {
         e.preventDefault();
+        
         let user = {
             firstName: this.state.firstName,lastName: this.state.lastName,gender : this.state.gender,email : this.state.email,
             password : this.state.password,numOfKids : this.state.numOfKids, city: this.state.city
@@ -219,6 +220,7 @@ import AdminService from '../AdminService';
                                     </div>
                                     <button className="btn btn-success" onClick={this.saveUser}>Save</button>
                                         <button className="btn btn-danger" onClick={this.cancel} style={{marginLeft: "10px"}}>Cancel</button>
+                                        
                                 </form>
                             </div>
                         </div>

@@ -15,20 +15,8 @@ class ListUser extends Component {
     this.deleteUser = this.deleteUser.bind(this);
     this.viewUser = this.viewUser.bind(this);
   }
+  //reactsratp tble button stat props axios componentdidmount=useeffect
 
-  // deleteUser(uid) {
-  //   if (window.confirm("Are You Sure?")) {
-  //     fetch("http://localhost:8082/deleteUserById/{uid}" &uid, {
-  //       method: "DELETE",
-  //       // header:{'Accept':'application/json'},
-  //       // 'Content-Type': 'application/json'
-  //     }).then((result) => {
-  //       result.json().then((resp) => {
-  //         alert("User has been deleted");
-  //       });
-  //     });
-  //   }
-  // }
   deleteUser(uid) {
     AdminService.deleteUser(uid).then((res) => {
       this.setState({
@@ -46,10 +34,12 @@ class ListUser extends Component {
   addUser() {
     this.props.history.push("/addUser/_add");
   }
-  viewUser(){
-    this.props.history.push("/viewUser")
+  viewUser(uid){
+    this.props.history.push( `/viewUser/${uid}`);
   }
-
+//   viewEmployee(id){
+//     this.props.history.push(`/view-employee/${id}`);
+// }
   // viewUser(uid) {
   //   AdminService.User(uid).then((res) => {
   //     this.setState({
@@ -122,51 +112,5 @@ class ListUser extends Component {
   }
 }
 
-// return (
-
-//   <div>
-//   //         <h2 className="text-center">Users List</h2>
-//   //         <div className="row">
-//   //             <button className="btn btn-primary" onClick={this.addUser}>Add User</button>
-//   //         </div>
-//   <Table striped>
-//     <thead>
-//       <tr>
-//                 <th> FirstName </th>
-//                 <th> LastName </th>
-//                 <th> Email </th>
-//                 <th> Gender </th>
-//                 <th> Password </th>
-//                 <th> Number Of Kids </th>
-//                 <th> City </th>
-//                 <th> Qualification </th>
-//                 <th> Age </th>
-//                 <th> Actions </th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//               {this.state.users.map((user) => (
-//                 <tr key={user.UID}>
-//                   <td>{user.firstName}</td>
-//                   <td>{user.lastName}</td>
-//                   <td>{user.email}</td>
-//                   <td>{user.gender}</td>
-//                   <td>{user.password}</td>
-//                   <td>{user.numOfKids}</td>
-//                   <td>{user.city}</td>
-//                   <td>{user.educationalQualification}</td>
-//                   <td>{user.age}</td>
-//                   <td>
-//                       <button style={{marginTop:"6px"}} onClick={()=> this.editUser(user.UID)} className="btn btn-info">Update</button>
-//                       <button style={{marginBottom:"6px"}} onClick={()=> this.deleteUser(user.UID)} className="btn btn-danger">Delete</button>
-//                   </td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//   </Table>
-//   </div>
-//   </div>
-
-// );
 
 export default withRouter(ListUser);

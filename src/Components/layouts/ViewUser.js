@@ -29,42 +29,42 @@ class ViewUser extends Component {
             <div>
                 <br></br>
                 <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center">  User Details</h3>
+                    <h3 className = "text-center">  User Details </h3>
                     <div className = "card-body">
                         <div className = "row">
-                            <label>  First Name: </label>
+                            <label>  First Name : </label>
                             <div> { this.state.user.firstName }</div>
                         </div>
                         <div className = "row">
-                            <label> Last Name: </label>
+                            <label> Last Name :  </label>
                             <div> { this.state.user.lastName }</div>
                         </div>
                         <div className = "row">
-                            <label>  Email : </label>
+                            <label>  Email :  </label>
                             <div> { this.state.user.email }</div>
                         </div>
                         <div className = "row">
-                            <label>  Password </label>
+                            <label>  Password :  </label>
                             <div> { this.state.user.password }</div>
                         </div>
                         <div className = "row">
-                            <label>  Gender </label>
+                            <label>  Gender :  </label>
                             <div> { this.state.user.gender }</div>
                         </div>
                         <div className = "row">
-                            <label>  Age </label>
+                            <label>  Age : </label>
                             <div> { this.state.user.age }</div>
                         </div>
                         <div className = "row">
-                            <label>  Educational Qualification </label>
+                            <label>  Educational Qualification :  </label>
                             <div> { this.state.user.education }</div>
                         </div>
                         <div className = "row">
-                            <label>  City </label>
+                            <label>  City :  </label>
                             <div> { this.state.user.city }</div>
                         </div>
                         <div className = "row">
-                            <label>  NumOfKids </label>
+                            <label>  NumOfKids :  </label>
                             <div> { this.state.user.numOfKids }</div>
                         </div>
                     </div>
